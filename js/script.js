@@ -23,7 +23,7 @@
 
 // Tu código aquí
 // Tu código aquí
-function botonClickeado(...i) {
+function botonClickeado(i) {
   function botonActual(){
     return console.log(`Hiciste click en el botón ${i}`);
   }
@@ -53,18 +53,19 @@ for (var i = 0; i < botones.length; i++) {
 */
 
 // Tu código aquí
-function incrementarFunc(PrimerDigito) {
-  function SecondNumber(SegundoDigito) {
-    return PrimerDigito += SegundoDigito;
+function incrementarFunc() {
+  let a = 0;
+  function SecondNumber() {
+    return a += 1;
   }
   return SecondNumber;
 }
 
 // BOILERPLATE
-const actualizar = incrementarFunc(0);
+const actualizar = incrementarFunc();
 const incrementar = document.querySelector('#incementar');
 incrementar.addEventListener('click', function () {
-  this.innerText = 'Incrementar' + actualizar(1);
+  this.innerText = 'Incrementar' + actualizar();
 });
 /*
   EJERCICIO C: --------------------------------------------
